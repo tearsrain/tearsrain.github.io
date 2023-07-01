@@ -1,0 +1,44 @@
+<!DOCTYPE html">
+<html xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" href="csscommon.css" type="text/css" />
+<title>竞赛展示</title>
+</head>
+<body>
+<div id="layout-content">
+<table class="imgtable"><tr><td>
+<img src="jingsai.jpg"  width="700px" height="800px" align="center"/></td>
+
+</tr></table>
+<h1 class="layout-content1">面向多尺寸样本空间的辐射源个体识别问题</h1>
+  
+ 
+<h2>荣获奖项</h2>
+<ul>
+<li><p>第七届CEMEE杯电磁环境数学建模大赛全国一等奖</p>
+</li>
+</ul>
+
+<h2>竞赛目标</h2>
+<ul>
+<li><h4>辐射源个体识别</h4>
+</li>
+辐射源个体识别(Specific Emitter identification, SEI)是提取同类辐射源发送的信号中的细微特征来识别不同辐射源个体的过程。这种能够区分不同辐射源的细微特征被称为射频指纹(Radio Frequency Fingerprint, RFF)。由于射频指纹来自于发射机电子元件的固有差异，不可避免且难以伪造，SEI 技术在军用和民用领域有着广阔的应用前景。在民用方面，SEI 技术可以应用于频谱资源管控、无线网络安全和认知无线电等领域。在军事通信方面，SEI 技术可以在复杂的战场环境中识别特定辐射源的信号，对于敌我识别和掌握战场态势具有重要意义。
+</ul>
+
+
+<h2>达到的结果</h2>
+<ul>
+<li><h4>一</h4>
+</li>
+在样本数据充足的情况下，建立样本充足的辐射源个体识别模型进行求解，主要包括切片预处理、网络识别、投票集成三个部分。在数据输入分类器之前，采用滑动窗对原始数据进行切片处理，将每帧信号处理为若干固定长度的子帧，切片法起到了扩充数据集的作用。本文建立ARNET、VGG16-1D、ResNet34-1D、ResNet50-1D四种神经网络分类器提取射频指纹特征。切片后的数据分别输入四种分类器中得到识别结果。最后通过子帧投票得到集成识别结果，提高了个体识别系统的容错力以及识别的准确率。实验证明，选择ResNet50-1D网络的识别效果最好，验证集网络平均识别率为88.08%，投票集成后识别率达到100%。
+<li><h4>二</h4>
+</li>
+在样本数据有限的情况下，问题一的模型无法正确提取射频指纹特征，本问建立样本有限的辐射源个体识别模型进行求解，主要包括特征增强预处理、网络识别、投票集成三个部分。首先对原始数据进行脉冲位置定位，包括粗定位和细定位，然后通过矩形窗滤波，再将脉冲信号重组并归一化得到预处理后的数据，再经过切片处理将数据输入到问题一建立的四种神经网络分类器中得到识别结果。最后通过子帧投票得到集成识别结果。实验证明，选择VGG16-1D网络的识别效果最好，验证集网络平均识别率为92.21%，投票集成后识别率达到100%。
+</ul>
+
+</div>
+</body>
+</html>
